@@ -9,6 +9,38 @@
     <title>HTML Intermediário</title>
 </head>
 
+<!-- Formulário de HTML, comunicação e integração entre frontend e backend.
+Aula focada apena sno frontend.  -->
+
+<!-- Na tag form, tudo que estiver dentro da tag seria enviado quando o formulario for submetido. -->
+
+<!-- method GET os dados são enviados no endereço, deve ser utilizado em formulário de busca-->
+<!-- method POST os dados não são enviados no endereço- deve ser usado em criação de logins e cadastros, caso contrário os dados do usuário serão exibidos no endereço do navegador-->
+<!-- action é o endereço para onde serão enviados o dados do form.// se estiver no mesmo domínio do site principal não precisa colocar o endereço completo. -->
+
+<!-- Metodo post - formulário de cadastro -->
+<form method="post" action="http://">
+
+
+    <input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui">
+    <label for="nome">Nome</label>
+    <br>
+    <input type="email" name="email" id="email" placeholder="seuemail@gmail.com">
+    <label for="email">Email</label>
+    <br>
+    <input type="submit">
+
+</form>
+
+<!-- Metodo get - formulário de busca -->
+
+<form action="https://www.youtube.com/results" method="GET">
+    <input type="text" name="busca" id="busca" placeholder="O que você procura?"><label for="busca">Busca</label>
+    <input type="submit">
+</form>
+
+
+
 <body>
 
 </body>
