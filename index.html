@@ -42,7 +42,7 @@ Aula focada apena sno frontend.  -->
     <input type="submit" value="buscar">
 </form>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 
 <!-- Diferentes tipos de input -->
 
@@ -90,9 +90,64 @@ Aula focada apena sno frontend.  -->
         <option value="RJ">RIO DE JANEIRO</option>
         <option value="SC">SANTA CATARINA</option>
         <option value="ES">ESPÍRITO SANTO</option>
-        <input type="submit" value="Enviar">
     </select>
+    <input type="submit" value="Enviar">
 </form>
+
+<br><br><br><br>
+<form action="https//" method="get">
+
+    <!-- vinculando uma textarea a um input de texto atribuindo o mesmo name para ambas as tags. -->
+
+    <input type="text" id="text2" name="assunto">
+    <label for="text2">Assunto</label>
+    <br>
+    <textarea name="assunto" id="textarea" cols="30" rows="10"></textarea><label for="textarea">Texto</label>
+    <br>
+    <input type="submit" value="Enviar">
+</form>
+<br><br><br><br><br><br><br><br><br><br>
+
+<!-- Devido as inúmeras atualizações que o HTML5 sofre, sempre que criar um projeto é importante saber se os navegadores suportam determinada TAG ou método - um bom website para consultar as funcionalidades do navegador é o https://caniuse.com/ -->
+
+<!-- Novos tipos de input para formulários que vieram com HTML5 -->
+
+<form action="https://" method="post">
+
+    <!-- input tipo color - serve para escolher uma cor - nem todos os navegadores suportam - o input passa o código hexadecimal da cor -->
+    <input type="color" name="color" id="color"><label for="color"> color</label>
+
+    <br><br><br>
+
+    <!-- input tipo date - seve para escolher uma data, é possivel delimitar o período de escolha por meio do atributo max e min -- data deve ser escrita (ano-mês-dia)-->
+    <input type="date" id="date" min="2019-12-20" max="2020-01-30"><label for="date"> date</label>
+
+    <br><br><br>
+
+    <!-- input tipo datetime-local - seve para escolher uma data e a hora -->
+    <input type="datetime-local" id="datetime" min="2019-12-20" max="2020-01-30"><label for="datetime"> date
+        time</label>
+
+    <br><br><br>
+
+    <!-- input tipo file - seve para escolher enviar um arquivo - somente pode ser usado se o método do formulário for "post" -->
+    <input type="file" id="arquivo"><label for="arquivo"> file</label>
+
+    <br><br><br>
+
+    <!-- input tipo range - cria um slider para um intervalo de valores -->
+    <input type="range" id="range" name="intervalo" min="-10" max="10" value="6"><label for="range"> range</label>
+
+    <br><br><br>
+
+    <!-- input tipo tel - abre apenas um teclano numérico quando acessado por aparelhos mobile -->
+    <input type="tel" id="tel" name="telefone"><label for="tel"> tel</label>
+
+    <br><br><br>
+
+    <input type="submit">
+</form>
+<br><br><br><br><br><br><br><br><br><br>
 
 <body>
 
