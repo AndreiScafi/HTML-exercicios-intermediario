@@ -1,0 +1,116 @@
+body {
+    background-color: #a7a7f5;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: rgb(124, 124, 250);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 95%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    text-align: center;
+    width: 600px;
+    margin: 0 auto 20px;
+    line-height: 28px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+ul li {
+    margin-left: 10px;
+    list-style-type: none;
+    background-color: #a7a7f5;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h4 {
+    margin: 10px auto 0;
+    background-color: rgb(203, 203, 244);
+    width: 99%;
+}
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px;
+    background-color: rgb(203, 203, 244);
+}
+
+.footer {
+    color: white;
+    background-color: rgb(124, 124, 250);
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.div1 {
+    max-width: 700px;
+    margin: 0 auto 80px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.form {
+    max-width: 700px;
+    margin: 0 auto 80px;
+    text-align: center;
+    background-color: white;
+    padding: 0;
+    border-radius: 15px;
+}
+
+/* top-left | top-right | bottom-right | bottom-left */
+
+.form .titulo {
+    background-color: rgb(124, 124, 250);
+    margin-bottom: 0;
+    padding: 5px;
+    border-radius: 15px 15px 0 0;
+
+}
+
+.form form {
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+.form form input {
+    width: 98%;
+    height: 30px;
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+.btn {
+    width: 10px;
+}
+
+p a {
+    color: rgb(11, 11, 197);
+}

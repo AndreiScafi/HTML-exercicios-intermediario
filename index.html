@@ -9,171 +9,263 @@
     <title>HTML Intermediário</title>
 </head>
 
-<!-- Formulário de HTML, comunicação e integração entre frontend e backend.
-Aula focada apena sno frontend.  -->
-
-<!-- Na tag form, tudo que estiver dentro da tag seria enviado quando o formulario for submetido. -->
-
-<!-- method GET os dados são enviados no endereço, deve ser utilizado em formulário de busca-->
-<!-- method POST os dados não são enviados no endereço- deve ser usado em criação de logins e cadastros, caso contrário os dados do usuário serão exibidos no endereço do navegador-->
-<!-- action é o endereço para onde serão enviados o dados do form.// se estiver no mesmo domínio do site principal não precisa colocar o endereço completo. -->
-
-<!-- Metodo post - formulário de cadastro -->
-<br><br><br><br><br>
-<form method="post" action="http://">
-
-
-    <input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui">
-    <label for="nome">Nome</label>
-    <br><br>
-    <input type="email" name="email" id="email" placeholder="seuemail@gmail.com">
-    <label for="email">Email</label>
-    <br><br>
-    <input type="submit">
-
-</form>
-
-<br><br><br><br>
-
-<!-- Metodo get - formulário de busca -->
-
-<form action="https://www.youtube.com/results" method="GET">
-    <input type="text" name="busca" id="busca" placeholder="O que você procura?"><label for="busca">Busca</label>
-    <input type="submit" value="buscar">
-</form>
-
-<br><br><br><br><br><br><br>
-
-<!-- Diferentes tipos de input -->
-
-<form action="https://">
-    <!-- input de texto -->
-    <input type="text" id="text"><label for="text"> text</label>
-    <br><br><br>
-    <!-- input tipo password -->
-    <input type="password" id="password" placeholder="password"><label for="password"> password</label>
-    <br><br><br>
-    <!-- input tipo número -->
-    <input type="number" id="number" min="0" max="10"><label for="number"> number</label>
-    <br><br><br>
-    <!-- input tipo email -->
-    <input type="email" id="email" placeholder="youremail@gmail.com"><label for="email"> email</label>
-    <br><br><br>
-    <!-- input tipo checkbox -->
-    <input type="checkbox" id="checkbox1" value="1" checked><label for="checkbox1"> checkbox 1</label>
-    <input type="checkbox" id="checkbox2" value="2"><label for="checkbox2"> checkbox 2</label>
-    <input type="checkbox" id="checkbox3" value="3"><label for="checkbox3"> checkbox 3</label>
-    <br><br><br>
-    <!-- input tipo radio // se os inputs radio tiverem o mesmo name, somente um poderá ser selecionado, caso tenham nomes diferentes, todos podem ser marcados-->
-    <input type="radio" id="radio1" value="1" name="radio" checked><label for="radio1"> radio 1</label>
-    <input type="radio" id="radio2" value="2" name="radio"><label for="radio2"> radio 2</label>
-    <input type="radio" id="radio3" value="3" name="radio"><label for="radio3"> radio 3</label>
-    <br><br><br>
-    <!-- input tipo reset - serve para resetar os outros inputs - Value muda o nome no botão -->
-    <input type="reset" id="reset" value="Limpar"><label for="reset"> reset</label>
-    <br><br><br>
-    <!-- input tipo submit - serve para enviar todos os inputs do formulário - Value muda o nome no botão -->
-    <input type="submit" id="submit" value="Enviar"><label for="submit"> submit</label>
-
-</form>
-
-<br><br><br><br><br>
-
-<!-- Tags, além do input, que podem ser usadas em formulários -- tag slect -->
-
-<form action="https//" method="get">
-
-    <!-- atributo size determina o tamanho da visualização das opções e o atributo multiple permite selecionar mais de uma opção, por fim o selected determina qual opção será selecionada por padrão. -->
-
-    <select name="estado" id="estado" size="2" multiple>
-        <option value="SP" selected>SÃO PAULO</option>
-        <option value="RJ">RIO DE JANEIRO</option>
-        <option value="SC">SANTA CATARINA</option>
-        <option value="ES">ESPÍRITO SANTO</option>
-    </select>
-    <input type="submit" value="Enviar">
-</form>
-
-<br><br><br><br>
-<form action="https//" method="get">
-
-    <!-- vinculando uma textarea a um input de texto atribuindo o mesmo name para ambas as tags. -->
-
-    <input type="text" id="text2" name="assunto">
-    <label for="text2">Assunto</label>
-    <br>
-    <textarea name="assunto" id="textarea" cols="30" rows="10"></textarea><label for="textarea">Texto</label>
-    <br>
-    <input type="submit" value="Enviar">
-</form>
-<br><br><br><br><br><br><br><br><br><br>
-
-<!-- Devido as inúmeras atualizações que o HTML5 sofre, sempre que criar um projeto é importante saber se os navegadores suportam determinada TAG ou método - um bom website para consultar as funcionalidades do navegador é o https://caniuse.com/ -->
-
-<!-- Novos tipos de input para formulários que vieram com HTML5 -->
-
-<form action="https://" method="post">
-
-    <!-- input tipo color - serve para escolher uma cor - nem todos os navegadores suportam - o input passa o código hexadecimal da cor -->
-    <input type="color" name="color" id="color"><label for="color"> color</label>
-
-    <br><br><br>
-
-    <!-- input tipo date - seve para escolher uma data, é possivel delimitar o período de escolha por meio do atributo max e min -- data deve ser escrita (ano-mês-dia)-->
-    <input type="date" id="date" min="2019-12-20" max="2020-01-30"><label for="date"> date</label>
-
-    <br><br><br>
-
-    <!-- input tipo datetime-local - seve para escolher uma data e a hora -->
-    <input type="datetime-local" id="datetime" min="2019-12-20" max="2020-01-30"><label for="datetime"> date
-        time</label>
-
-    <br><br><br>
-
-    <!-- input tipo file - seve para escolher enviar um arquivo - somente pode ser usado se o método do formulário for "post" -->
-    <input type="file" id="arquivo"><label for="arquivo"> file</label>
-
-    <br><br><br>
-
-    <!-- input tipo range - cria um slider para um intervalo de valores -->
-    <input type="range" id="range" name="intervalo" min="-10" max="10" value="6"><label for="range"> range</label>
-
-    <br><br><br>
-
-    <!-- input tipo tel - abre apenas um teclano numérico quando acessado por aparelhos mobile -->
-    <input type="tel" id="tel" name="telefone"><label for="tel"> tel</label>
-
-    <br><br><br>
-
-    <input type="submit">
-</form>
-<br><br><br><br><br><br><br><br><br><br>
-
-<!-- Tags semânticas do HTML5 - Tags semânticas são lidas pelo google, que compreende o que cada div está fazendo dentro da sua página -- é considerado uma boa prática a utilização de Tags semânticas pois elas facilitam o ranqueamento no google.-->
-
-<header>
-    <h1>header é uma tag de cabeçalho.</h1>
-
-    <nav>
-        <h2>nav é uma tag de navegação, utilizada em menus</h2>
-    </nav>
-</header>
-
-<main>
-    <h2>A tag main indica o conteúdo principal da página</h2>
-
-    <!-- Não existe uma regra específica para utilização das tags 'section' e article -->
-    <section>A tag section é usada para separar a seçoes do seu site</section>
-    <article> A tag article define um artigo de seu site.</article>
-</main>
-
-<footer>
-    <p>footer é uma tag que indica o rodapé da página.</p>
-</footer>
-
-
-
 <body>
+    <!-- Tags semânticas do HTML5 - Tags semânticas são lidas pelo google, que compreende o que cada div está fazendo dentro da sua página -- é considerado uma boa prática a utilização de Tags semânticas pois elas facilitam o ranqueamento no google.-->
+
+    <header class="header">
+        <!-- header é uma tag de cabeçalho.-->
+        <nav class="nav">
+            <div class="menu">MENU</div>
+            <!--nav é uma tag de navegação, utilizada em menus-->
+            <ul class="menus">
+                <li> <a href="#form1">Formulário 1</a></li>
+                <li> <a href="#form2">Formulário 2</a></li>
+                <li> <a href="#form3">Formulário 3</a></li>
+                <li> <a href="#form4">Formulário 4</a></li>
+                <li> <a href="#form5">Formulário 5</a></li>
+                <li> <a href="#form6">Formulário 6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+
+        <div class="div1">
+            <h2>A TAG 'main' indica o conteúdo principal da página</h2>
+
+            <!-- Não existe uma regra específica para utilização das tags 'section' e article -->
+            <section>A TAG section é usada para separar a seçoes do seu site</section>
+            <article> A TAG article define um artigo de seu site.</article>
+        </div>
+
+
+        <!-- Formulário de HTML, comunicação e integração entre frontend e backend.
+Aula focada apenas no frontend.  -->
+        <div class="div1">
+            <h2>Formulário de HTML, comunicação e integração entre frontend e backend.</h2>
+            <p>Na tag form, tudo que estiver dentro da tag seria enviado quando o formulario for submetido.</p>
+            <p>Method <strong>GET</strong> os dados são enviados no endereço, deve ser utilizado em formulário de busca
+            </p>
+            <p>Method <strong>POST</strong> os dados não são enviados no endereço- deve ser usado em criação de logins e
+                cadastros, caso
+                contrário os dados do usuário serão exibidos no endereço do navegador</p>
+
+            <p>Action é o endereço para onde serão enviados o dados do form.// se estiver no mesmo domínio do site
+                principal não precisa colocar o endereço completo.</p>
+        </div>
+
+        <!-- Na tag form, tudo que estiver dentro da tag seria enviado quando o formulario for submetido. -->
+
+        <!-- method GET os dados são enviados no endereço, deve ser utilizado em formulário de busca-->
+        <!-- method POST os dados não são enviados no endereço- deve ser usado em criação de logins e cadastros, caso contrário os dados do usuário serão exibidos no endereço do navegador-->
+        <!-- action é o endereço para onde serão enviados o dados do form.// se estiver no mesmo domínio do site principal não precisa colocar o endereço completo. -->
+
+        <!-- Metodo post - formulário de cadastro -->
+        <div class="form" id="form1">
+            <h2 class="titulo">Formulário 1</h2>
+            <h3>Metodo post - formulário de cadastro</h3>
+            <form method="post" action="http://">
+
+
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui">
+                <label for="nome">Nome</label>
+                <input type="email" name="email" id="email" placeholder="seuemail@gmail.com">
+                <label for="email">Email</label>
+                <input class="btn" type="submit">
+
+            </form>
+        </div>
+
+
+        <div class="form" id="form2">
+
+            <h2 class="titulo">Formulário 2</h2>
+            <!-- Metodo get - formulário de busca -->
+            <h3>Metodo get - formulário de busca</h3>
+
+            <form action="https://www.youtube.com/results" method="GET">
+                <input type="text" name="busca" id="busca" placeholder="O que você procura?"><label
+                    for="busca">Busca</label>
+                <input type="submit" value="buscar">
+            </form>
+
+        </div>
+
+
+
+
+        <!-- Diferentes tipos de input -->
+        <div class="form" id="form3">
+            <h2 class="titulo">Formulário 3</h2>
+
+            <h3>Diferentes tipos de input </h3>
+
+            <form action="https://">
+
+                <!-- input de texto -->
+                <h4> Input tipo texto </h4>
+                <input type="text" id="text"><label for="text"> text</label>
+
+                <!-- input tipo password -->
+                <h4> Input tipo password</h4>
+                <input type="password" id="password" placeholder="password"><label for="password"> password</label>
+
+                <!-- input tipo número -->
+                <h4> Input tipo número</h4>
+                <input type="number" id="number" min="0" max="10"><label for="number"> number</label>
+
+                <h4> Input tipo email</h4>
+                <!-- input tipo email -->
+                <input type="email" id="email" placeholder="youremail@gmail.com"><label for="email"> email</label>
+
+                <h4> Input tipo checkbox</h4>
+                <br>
+                <!-- input tipo checkbox -->
+                <input type="checkbox" id="checkbox1" value="1" checked><label for="checkbox1"> checkbox 1</label>
+                <input type="checkbox" id="checkbox2" value="2"><label for="checkbox2"> checkbox 2</label>
+                <input type="checkbox" id="checkbox3" value="3"><label for="checkbox3"> checkbox 3</label>
+
+                <h4> Input tipo radio</h4>
+                <p>Se os inputs radio tiverem o mesmo name, somente um poderá ser selecionado, caso tenham nomes
+                    diferentes, todos podem ser marcados</p>
+                <!-- input tipo radio // se os inputs radio tiverem o mesmo name, somente um poderá ser selecionado, caso tenham nomes diferentes, todos podem ser marcados-->
+                <input type="radio" id="radio1" value="1" name="radio" checked><label for="radio1"> radio 1</label>
+                <input type="radio" id="radio2" value="2" name="radio"><label for="radio2"> radio 2</label>
+                <input type="radio" id="radio3" value="3" name="radio"><label for="radio3"> radio 3</label>
+
+                <h4> Input tipo reset</h4>
+                <p>Serve para resetar os outros inputs - Value muda o nome no botão</p>
+                <!-- input tipo reset - serve para resetar os outros inputs - Value muda o nome no botão -->
+                <input type="reset" id="reset" value="Limpar"><label for="reset"> reset</label>
+
+                <h4> Input tipo submit</h4>
+                <p>Serve para enviar todos os inputs do formulário - Value muda o nome no botão</p>
+                <!-- input tipo submit - serve para enviar todos os inputs do formulário - Value muda o nome no botão -->
+                <input type="submit" id="submit" value="Enviar"><label for="submit"> submit</label>
+
+            </form>
+        </div>
+
+
+        <div class="form" id="form4">
+            <h2 class="titulo">Formulário 4</h2>
+
+            <!-- Tags, além do input, que podem ser usadas em formulários -- tag select -->
+            <h3>TAG 'select' também pode ser usada no formulário</h3>
+
+            <form action="https//" method="get">
+
+                <h4>TAG tipo select</h4>
+                <p>Atributo size determina o tamanho da visualização das opções e o atributo multiple permite selecionar
+                    mais de uma opção, por fim o selected determina qual opção será selecionada por padrão.</p>
+                <!-- atributo size determina o tamanho da visualização das opções e o atributo multiple permite selecionar mais de uma opção, por fim o selected determina qual opção será selecionada por padrão. -->
+
+                <select name="estado" id="estado" size="2" multiple>
+                    <option value="SP" selected>SÃO PAULO</option>
+                    <option value="RJ">RIO DE JANEIRO</option>
+                    <option value="SC">SANTA CATARINA</option>
+                    <option value="ES">ESPÍRITO SANTO</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+        <div class="form" id="form5">
+            <h2 class="titulo">Formulário 5</h2>
+
+            <form action="https//" method="get">
+
+                <p>Vinculando uma textarea a um input de texto atribuindo o mesmo name para ambas as tags.</p>
+
+                <!-- vinculando uma textarea a um input de texto atribuindo o mesmo name para ambas as tags. -->
+
+                <input type="text" id="text2" name="assunto">
+                <label for="text2">Assunto</label>
+                <textarea name="assunto" id="textarea" cols="88" rows="10"></textarea><label
+                    for="textarea">Texto</label>
+                <br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+        <div class="div1">
+            <!-- Devido as inúmeras atualizações que o HTML5 sofre, sempre que criar um projeto é importante saber se os navegadores suportam determinada TAG ou método - um bom website para consultar as funcionalidades do navegador é o https://caniuse.com/ -->
+
+            <p>
+                Devido as inúmeras atualizações que o HTML5 sofre, sempre que criar um projeto é importante saber se os
+                navegadores suportam determinada TAG ou método - um bom website para consultar as funcionalidades do
+                navegador é o <a class="link" href="https://caniuse.com/" target="_blank">https://caniuse.com/</a>
+            </p>
+        </div>
+
+        <div class="form" id="form6">
+            <h2 class="titulo">Formulário 6</h2>
+
+            <h3>Novos tipos de input para formulários que vieram com HTML5</h3>
+            <!-- Novos tipos de input para formulários que vieram com HTML5 -->
+
+            <form action="https://" method="post">
+
+                <h4>input tipo color</h4>
+                <p>serve para escolher uma cor - nem todos os navegadores suportam - o input passa o código hexadecimal
+                    da cor</p>
+
+                <!-- input tipo color - serve para escolher uma cor - nem todos os navegadores suportam - o input passa o código hexadecimal da cor -->
+                <input type="color" name="color" id="color"><label for="color"> color</label>
+
+                <h4>input tipo date</h4>
+                <p>serve para escolher uma data, é possivel delimitar o período de escolha por meio do atributo max e
+                    min
+                    -- data deve ser escrita (ano-mês-dia)</p>
+
+                <!-- input tipo date - serve para escolher uma data, é possivel delimitar o período de escolha por meio do atributo max e min -- data deve ser escrita (ano-mês-dia)-->
+                <input type="date" id="date" min="2019-12-20" max="2020-01-30"><label for="date"> date</label>
+
+                <h4>input tipo datetime-local</h4>
+                <p>serve para escolher uma data e a hora</p>
+
+                <!-- input tipo datetime-local - serve para escolher uma data e a hora -->
+                <input type="datetime-local" id="datetime" min="2019-12-20" max="2020-01-30"><label for="datetime"> date
+                    time</label>
+
+                <h4>input tipo file</h4>
+                <p>serve para escolher enviar um arquivo - somente pode ser usado se o método do formulário for "post"
+                </p>
+
+                <!-- input tipo file - serve para escolher enviar um arquivo - somente pode ser usado se o método do formulário for "post" -->
+                <input type="file" id="arquivo"><label for="arquivo"> file</label>
+
+
+                <h4>input tipo range</h4>
+                <p>cria um slider para um intervalo de valores
+                </p>
+                <!-- input tipo range - cria um slider para um intervalo de valores -->
+                <input type="range" id="range" name="intervalo" min="-10" max="10" value="6"><label for="range">
+                    range</label>
+
+                <h4>input tipo tel</h4>
+                <p>abre apenas um teclano numérico quando acessado por aparelhos mobile
+                </p>
+                <!-- input tipo tel - abre apenas um teclano numérico quando acessado por aparelhos mobile -->
+                <input type="tel" id="tel" name="telefone"><label for="tel"> tel</label>
+                <br><br>
+                <input type="submit">
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+        <br><br><br><br><br><br><br><br><br><br>
+    </main>
+    <footer class="footer">
+        <p>footer é uma tag que indica o rodapé da página.</p>
+    </footer>
+
 
 </body>
 
