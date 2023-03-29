@@ -19,27 +19,63 @@ Aula focada apena sno frontend.  -->
 <!-- action é o endereço para onde serão enviados o dados do form.// se estiver no mesmo domínio do site principal não precisa colocar o endereço completo. -->
 
 <!-- Metodo post - formulário de cadastro -->
+<br><br><br><br><br>
 <form method="post" action="http://">
 
 
     <input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui">
     <label for="nome">Nome</label>
-    <br>
+    <br><br>
     <input type="email" name="email" id="email" placeholder="seuemail@gmail.com">
     <label for="email">Email</label>
-    <br>
+    <br><br>
     <input type="submit">
 
 </form>
+
+<br><br><br><br>
 
 <!-- Metodo get - formulário de busca -->
 
 <form action="https://www.youtube.com/results" method="GET">
     <input type="text" name="busca" id="busca" placeholder="O que você procura?"><label for="busca">Busca</label>
-    <input type="submit">
+    <input type="submit" value="buscar">
 </form>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+<!-- Diferentes tipos de input -->
+
+<form action="https://">
+    <!-- input de texto -->
+    <input type="text" id="text"><label for="text"> text</label>
+    <br><br><br>
+    <!-- input tipo password -->
+    <input type="password" id="password" placeholder="password"><label for="password"> password</label>
+    <br><br><br>
+    <!-- input tipo número -->
+    <input type="number" id="number" min="0" max="10"><label for="number"> number</label>
+    <br><br><br>
+    <!-- input tipo email -->
+    <input type="email" id="email" placeholder="youremail@gmail.com"><label for="email"> email</label>
+    <br><br><br>
+    <!-- input tipo checkbox -->
+    <input type="checkbox" id="checkbox1" value="1" checked><label for="checkbox1"> checkbox 1</label>
+    <input type="checkbox" id="checkbox2" value="2"><label for="checkbox2"> checkbox 2</label>
+    <input type="checkbox" id="checkbox3" value="3"><label for="checkbox3"> checkbox 3</label>
+    <br><br><br>
+    <!-- input tipo radio // se os inputs radio tiverem o mesmo name, somente um poderá ser selecionado, caso tenham nomes diferentes, todos podem ser marcados-->
+    <input type="radio" id="radio1" value="1" name="radio" checked><label for="radio1"> radio 1</label>
+    <input type="radio" id="radio2" value="2" name="radio"><label for="radio2"> radio 2</label>
+    <input type="radio" id="radio3" value="3" name="radio"><label for="radio3"> radio 3</label>
+    <br><br><br>
+    <!-- input tipo reset - serve para resetar os outros inputs - Value muda o nome no botão -->
+    <input type="reset" id="reset" value="Limpar"><label for="reset"> reset</label>
+    <br><br><br>
+    <!-- input tipo submit - serve para enviar todos os inputs do formulário - Value muda o nome no botão -->
+    <input type="submit" id="submit" value="Enviar"><label for="submit"> submit</label>
+
+</form>
 
 <body>
 
